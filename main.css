@@ -1,0 +1,317 @@
+@import url('reset.css');
+
+@font-face{
+font-family: 'wf_SegoeUILight';
+src:url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Light/latest.eot');
+src:url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Light/latest.eot?#iefix') format('embedded-opentype'),
+url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Light/latest.woff') format('woff'),
+url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Light/latest.ttf') format('truetype'),
+url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Light/latest.svg#web') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+body{
+
+    background: #000;
+    color: #fff;
+
+    font-family: "Segoe UI", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+a{
+    color: #fff;
+}
+
+a:hover{
+    opacity: 0.8;
+}
+
+li{
+    color: #fff;
+}
+
+#header{
+    min-width: 1440px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    min-width: 1440px;
+    column-gap: 20px;
+    margin: 0px 25px;
+}
+
+.welcome-photo{
+    background-image: url('./images/main-welcomes.png'); 
+    background-size: contain; /* или contain */
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 1200px;
+}
+
+.header-nav {
+    padding-top: 20px;
+    
+}
+
+.nav-logo {
+
+    display: flex;
+    align-items: center;
+    grid-auto-flow: column;
+}   
+
+.nav-logo_photo {
+    max-width: 50px;
+    max-height: 50px;
+    display: flex;
+    margin-right: 10px;
+}
+
+.nav-logo_title {
+    display: flex;
+    grid-auto-flow: column;
+    grid-column: 2/3;
+
+    font-size: 11px;
+    line-height: 1.2;
+
+    white-space: nowrap;
+}
+
+.nav-ul {
+    padding-top: 15px;
+    display: flex;
+    grid-auto-flow: column; 
+    gap: 40px;
+    
+
+    grid-column: 3 / 7;
+}
+
+.nav-btns {
+   display: flex;
+   grid-auto-flow: column;
+
+
+   grid-column: 10 / 13;
+}
+
+.nav-btn_language {
+    width: 45px;
+    height: 45px;
+
+    margin-right: 25px;
+    margin-left: 20px;
+
+    border: 1px solid #777;
+    border-radius: 4px;
+
+    backdrop-filter: blur(40px);
+    background: rgba(13, 230, 190, 0.01);
+}
+
+.nav-btn_reg {
+    display: inline-block;
+    padding: 12px 30px 12px ;
+    font-size: 16px;
+    text-transform: uppercase;
+
+    position: relative;
+    top: -2px;
+    z-index: 1; 
+    background-color: transparent; 
+
+    background-image: url('./images/Union.png'); 
+    background-size: contain; 
+    background-position: center;
+    background-repeat: no-repeat; 
+
+}
+
+.nav-btn_reg:hover{
+    opacity: 0.8;
+}
+
+.nav-btn_login {
+    position: relative;
+    top: -2px;
+    left: 3px;
+    display: inline-block;
+    padding: 12px 20px 12px 30px; 
+    text-transform: uppercase;
+    color: #0c0c15;
+}
+
+.nav-btn_reg_svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; 
+    width: 120px;
+    height: 50px;
+}
+
+.nav-btn_login_text {
+    position: relative;
+    z-index: 1; /* Текст располагается поверх SVG */
+    font-weight: 600;
+}
+
+.nav-btn_login:hover {
+    opacity: 0.8;
+}
+
+.welcome-text{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    grid-auto-flow: column;
+
+    grid-column: 1 / 6;
+    top: 240px;
+}
+
+.welcome-title{
+    font-weight: 700;
+    font-size: 65px;
+    line-height: 120%;
+    letter-spacing: 0.06em;
+    color: #fff;
+}
+
+.welcome-title_mining{
+    color: #0de6be;
+}
+
+.welcome-subtitle{
+    margin-top: 35px;
+    margin-bottom: 55px;   
+}
+
+.btn_welcome-info {
+    display: inline-block;
+    padding: 20px 25px 20px 25px ;
+    font-size: 16px;
+    text-transform: uppercase;
+
+    position: relative;
+    top: -2px;
+    z-index: 1; 
+    background-color: transparent; 
+
+    background-image: url('./images/Subtract.svg'); 
+    background-size: contain; 
+   
+    background-repeat: no-repeat; 
+
+}
+
+.welcome-btn-start_mining {
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    padding: 20px 20px 20px 20px; 
+    text-transform: uppercase;
+    color: #0c0c15;
+}
+
+.welcome-btn-start_mining_text {
+    position: relative;
+    z-index: 1; 
+    text-transform: uppercase;
+    color: #0c0c15; 
+    font-weight: 600;
+}
+
+.welcome-btn_svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; 
+    width: 190px;
+    height: 65px;
+}
+
+.btn_welcome-info {
+    position: relative;
+    left: -14px;
+}
+
+.create-equipment_text {
+    display: flex;
+    grid-auto-flow: column; 
+    white-space: nowrap;
+    text-transform: uppercase;
+    flex-direction: column;
+
+    
+    font-weight: 700;
+    font-size: 60px;
+    grid-column: 1 / 8;
+}
+
+.create-equipment {
+    
+}
+.create-equipment_photo {
+    position: relative;
+    background-size: contain; 
+    background-repeat: no-repeat;
+
+    margin-top: 100px;
+
+}
+
+.create-equipment_btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 55px;
+    grid-column: 1 / 13;
+}
+
+.create-equipment_btn {
+    position: relative;
+    display: inline-flex;           
+    align-items: center;             
+    justify-content: center;         
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    width: 100%;                    
+    max-width: 600px;               
+    height: 80px;                   
+}
+
+.create-equipment_btn_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.create-equipment_btn_text {
+    position: relative;
+    z-index: 1; 
+    text-transform: uppercase;
+    color: #0de6be;
+}
+
+
+.create-equipment_btn_text.color{
+    color: gray;
+}
+
+.create-equipment_btn_text.color:hover{
+    color: #0de6be;
+}
+
+.create-equipment_btn_text:hover{
+    color: gray;
+}
